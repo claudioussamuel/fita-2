@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leasontwo/components/friend_post_list_view.dart';
 import 'package:leasontwo/components/today_recipe_list_view.dart';
-import '../../components/cards.dart';
 import '../../models/models.dart';
 import '../../api/mock_fooderlich_service.dart';
 
@@ -12,8 +11,6 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-// 2
-// TODO: Add TodayRecipeListView FutureBuilder
     return FutureBuilder(
       future: mockService.getExploreData(),
       builder: (context, AsyncSnapshot<ExploreData> snapshot) {
